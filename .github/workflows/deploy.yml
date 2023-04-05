@@ -5,10 +5,10 @@ on:
       - master
       - dev
 env:
-  MONGODB_CLUSTER_ADDRESS: github-actions-fullstac.j3ugwdx.mongodb.net
-  MONGO_DB_NAME: github-actions-fullstack
-  MONGODB_USERNAME: gammasynchrony2
-  MONGODB_PASSWORD: KkZtI0A9rv3qtss7
+  MONGODB_CLUSTER_ADDRESS: ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
+  MONGO_DB_NAME: ${{ secrets.MONGO_DB_NAME }}
+  MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+  MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD}}
   PORT: 8080
 jobs:
   test:
