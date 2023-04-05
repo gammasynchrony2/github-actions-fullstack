@@ -4,6 +4,12 @@ on:
     branches:
       - main
       - dev
+env:
+  MONGODB_CLUSTER_ADDRESS: github-actions-fullstac.j3ugwdx.mongodb.net
+  MONGO_DB_NAME: github-actions-fullstack
+  MONGODB_USERNAME: gammasynchrony2
+  MONGODB_PASSWORD: fbZwWBjm33hZYHWS
+  PORT: 8080
 jobs:
   test:
     environment: testing
@@ -19,11 +25,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run server
-        run: npm start & npx wait-on http://127.0.0.1:XYZ
+        run: npm start & npx wait-on http://127.0.0.1:$PORT
       - name: Run tests
         run: npm test
       - name: Output information
-        run: echo "..."
+        run: echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
