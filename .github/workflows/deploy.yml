@@ -8,7 +8,7 @@ env:
   MONGODB_CLUSTER_ADDRESS: github-actions-fullstac.j3ugwdx.mongodb.net
   MONGO_DB_NAME: github-actions-fullstack
   MONGODB_USERNAME: gammasynchrony2
-  MONGODB_PASSWORD: fbZwWBjm33hZYHWS
+  MONGODB_PASSWORD: KkZtI0A9rv3qtss7
   PORT: 8080
 jobs:
   test:
